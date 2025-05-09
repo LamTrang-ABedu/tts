@@ -1,4 +1,4 @@
-const TTS_API = "https://voice-of-hope.onrender.com";
+const TTS_API = "https://proxy.lampv01203.workers.dev/voice";
 let audio = null;
 let lastAudioUrl = null;
 const ttsCache = new Map();
