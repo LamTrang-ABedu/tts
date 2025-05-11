@@ -1,4 +1,3 @@
-const TTS_API = "https://voice.lam.io.vn";
 let audio = null;
 let lastAudioUrl = null;
 const ttsCache = new Map();
@@ -9,7 +8,7 @@ async function loadVoices() {
   const loading = document.getElementById("loadingStatus");
   if (loading) loading.style.display = "inline";
   try {
-    const res = await fetch(`${TTS_API}/api/voices`);
+    const res = await fetch('/api/voices');
     const data = await res.json();
     const provider = data.default;
     const providers = data.providers;
@@ -76,7 +75,7 @@ async function speakText() {
   if (loading) loading.style.display = "inline";
 
   try {
-    const res = await fetch(`${TTS_API}/api/tts`, {
+    const res = await fetch('/api/tts', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text, provider, language, voice })
