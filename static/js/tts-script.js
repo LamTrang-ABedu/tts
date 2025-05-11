@@ -1,4 +1,4 @@
-const TTS_API = "https://proxy.lam.io.vn/voice";
+const TTS_API = "https://voice.lam.io.vn";
 let audio = null;
 let lastAudioUrl = null;
 const ttsCache = new Map();
