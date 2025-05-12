@@ -1,0 +1,9 @@
+name = "tts"
+compatibility_date = "2025-05-12"
+pages_build_output_dir = "./"  # vì bạn deploy trực tiếp index.html
+
+[site]
+bucket = "./"  # thư mục chứa index.html và static/
+
+[dev]
+port = 8989
